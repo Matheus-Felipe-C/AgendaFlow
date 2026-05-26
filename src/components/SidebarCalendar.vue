@@ -5,7 +5,7 @@ const tasks = ref([])
 const loading = ref(true)
 
 onMounted( async () => {
-    tasks.value = await window.callAmplenotePlugin("getTasksToday");
+    tasks.value = await window.callAmplenotePlugin("getTasks");
     loading.value = false
 })
 
