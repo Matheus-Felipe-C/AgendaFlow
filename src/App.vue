@@ -1,7 +1,7 @@
 <script setup>
-  import MainCalendar from './components/MainCalendar.vue';
+  import SidebarCalendar from './components/SidebarCalendar.vue';
 </script>
 
 <template>
-  <MainCalendar></MainCalendar>
+  <SidebarCalendar></SidebarCalendar>
 </template>

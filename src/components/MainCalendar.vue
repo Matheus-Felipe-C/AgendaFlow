@@ -3,11 +3,13 @@ import { computed, onMounted, ref } from 'vue';
 import DayColumn from './DayColumn.vue';
 import Taskcard from './Taskcard.vue';
 import { Plus, Minus } from 'lucide-vue-next';
+import { sample_tasks } from '../utils/sample-tasks';
 
 const tasks = ref([]);
 
 onMounted(async () => {
-    tasks.value = await window.callAmplenotePlugin("getTasks");
+    // tasks.value = await window.callAmplenotePlugin("getTasks");
+    tasks.value = sample_tasks;
 })
 
 const daysToShow = 3;

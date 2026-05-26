@@ -1,4 +1,4 @@
-let tasks = [
+export let sample_tasks = [
     {
         content: "Review project roadmap",
         deadline: 1778467200,

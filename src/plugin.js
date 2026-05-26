@@ -1,9 +1,14 @@
 // plugin.js
 // The build step generates this file from the compiled Svelte output.
 // Commit it; the GitHub→Amplenote plugin will bundle it into the note.
-import getCounterHTML from "./counter-embed.js";
+import getSidebarHTML from "./counter-embed.js";
 
 const plugin = {
+
+  settings: {
+    day_tag: app.settings['day-tag'] ?? null
+  },
+
   // ── Trigger: adds "Counter" to the quick-open menu ─────────────────────
   appOption: {
     "Counter": {
@@ -27,7 +32,7 @@ const plugin = {
 
   // ── Renders the Svelte app inside the embed iFrame ─────────────────────
   renderEmbed(app, ...args) {
-    return getCounterHTML();
+    return getSidebarHTML();
   },
 
   // ── Receives calls from window.callAmplenotePlugin() in the embed ───────
