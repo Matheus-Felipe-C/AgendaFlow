@@ -49,6 +49,8 @@ const plugin = {
 
         return allTasks;
       }
+      default:
+        throw Error(`Could not find action "${action}", please fix this before releasing the build`);
     }
   }
 };
