@@ -1,12 +1,11 @@
 <script setup>
 import { onMounted, ref } from 'vue'
-import { sample_tasks } from '../utils/sample-tasks'
 
 const tasks = ref([])
 const loading = ref(true)
 
-onMounted(() => {
-    tasks.value = sample_tasks
+onMounted( async () => {
+    tasks.value = await window.callAmplenotePlugin("getTasksToday");
     loading.value = false
 })
 
